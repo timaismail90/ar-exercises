@@ -16,5 +16,10 @@ Store.where(mens_apparel: true).find_each do |store|
     puts "#{store.name}, #{store.annual_revenue}"
 end
 
+#Client.where("womens_apparel = ? AND annual_revenue  < ?", true, 1000000)
+Store.where("womens_apparel = ? AND annual_revenue  < ?", true, 1000000).find_each do |store|
+    puts "#{store.name}, #{store.annual_revenue}"
+end
+
 
 
